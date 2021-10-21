@@ -63,7 +63,7 @@ function refreshDataBookShelf() {
   const listUncompleted = document.getElementById(UNCOMPLETED_LIST_BOOK_SHELF);
   let listCompleted = document.getElementById(COMPLETED_LIST_BOOK_ID);
 
-  for (book of books) {
+  for (let [key, value] of entries (books)) {
     const newBook = makeBook(book.title, book.author, book.year, book.isCompleted);
     newBook[BOOKSHELF_ITEMID] = book.id;
 
